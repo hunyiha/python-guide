@@ -94,9 +94,7 @@ print(message)
 
 上面的运行结果：
 
-![image-20211207230347285](/home/hunyiha/workspace/python-guide/images/image-20211207230347285.png)
-
-
+![image-20211207230347285](images/image-20211207230347285.png)
 
 上述代码中**message**就是定义的一个变量，**message**和文本“**Hello Python World**”相关联。
 
@@ -117,11 +115,9 @@ print(message)
 
 ​    **Python关键字和内置函数**：  
 
-![image-20211207231451222](/home/hunyiha/workspace/python-guide/images/image-20211207231451222.png)
+​	![image-20211207231451222](images/image-20211207231451222.png)
 
-![image-20211207231534747](/home/hunyiha/workspace/python-guide/images/image-20211207231534747.png)
-
-
+​		![image-20211207231534747](images/image-20211207231534747.png)
 
 #### 2.2.2 使用变量时避免命名错误
 
