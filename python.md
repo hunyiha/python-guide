@@ -288,4 +288,196 @@ message.rstrip()
 
 ### 2.4 数字
 
-在Python中，可对整数执行加（ + ）减（ - ）乘（ * ）除（ / ）运算。
+#### 2.4.1 整数
+
+在Python中，可对整数执行加（ + ）减（ - ）乘（ * ）除（ / ）乘方（**）运算。
+
+```cmd
+>>> 1 + 1
+2
+>>> 2 - 1
+1
+>>> 2 * 2
+4
+>>> 3 / 2
+1.5
+>>> 2 ** 3
+8
+```
+
+
+
+#### 2.4.2 浮点数
+
+带小数点的数字都称为**浮点数**。浮点数的计算结果不一定准确(计算机中整数和浮点数储存方式不一样)。
+
+```cmd
+>>> 0.1 + 0.1
+0.2
+>>> 0.2 + 0.2
+0.4
+>>> 0.2 * 2
+0.4
+>>> 0.1 + 0.2
+0.30000000000000004
+```
+
+>
+>
+>Tip：上面0.1 + 0.2结果出现了0.30000000000000004。
+
+
+
+#### 2.4.3 使用函数 str()避免类型错误
+
+birthday.py
+
+***
+
+```python
+age = 23 
+message = "Happy " + age + "rd Birthday!"
+print(message)
+```
+
+上述代码会出现异常，因为age是数字类型，不能直接和字符串进行**+**运算。
+
+可以调用函数str()将数字转换为字符串。
+
+
+
+#### 2.4.4 Python 2 中的整数
+
+```cmd
+>>> python2.7
+>>> 3 / 2
+1
+```
+
+Python2中整数相除只包含整数部分，小数部分被删除，是删除不是四舍五入。
+
+
+
+### 2.5 注释
+
+注释是写给人看的。
+
+
+
+#### 2.5.1 如何编写注释
+
+在Python中，单行注释用**#**标识，多行注释使用```'''```标识。
+
+```python
+# 我是一个注释
+
+'''
+	我是多行注释
+'''
+```
+
+
+
+#### 2.5.2 该编写什么样的注释
+
+给人看的注释
+
+
+
+#### 2.6 Python 之禅
+
+python终端中输入```import this```查看python之禅
+
+```python
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+>>>
+```
+
+
+
+### 2.7 小结
+
+- 变量的使用
+- 变量名命名规范
+- 字符串相关的几个方法
+- 整数和浮点数的使用
+
+
+
+## 第3章 列表简介
+
+### 3.1 列表是什么
+
+列表由一系列按特定顺序排列的元素组成，是**有序集合**。
+
+Python中使用`[]`定义列表，列表中的元素使用```,```隔开。
+
+```python
+# 列表的定义
+name = ["侯燕子", "臭宝", "宝宝"]
+
+# 列表的打印
+print(name)
+```
+
+打印结果如下：
+
+```cmd
+['侯燕子', '臭宝', '宝宝']
+```
+
+
+
+#### 3.1.1 访问列表元素
+
+列表是有序集合，可以通过索引访问列表中的元素，索引从0开始。
+
+```语法：```列表名称[索引]
+
+ ```示例:```		
+
+```python
+# 定义列表
+name = ["侯燕子", "臭宝", "宝宝"]
+# 打印列表中索引为1的元素
+print(name[1])
+```
+
+ 打印结果如下：
+
+```cmd
+臭宝
+```
+
+ >
+ >
+ >Tip：没有[]和引号
+
+
+
+
+
+#### 3.1.2 索引从 0 而不是 1 开始
+
+在大多数编程语言中，第一个列表元素的索引为0，而不是1。
