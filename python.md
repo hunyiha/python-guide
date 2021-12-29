@@ -1601,3 +1601,270 @@ if car != 'bwm':
 
 
 #### 5.2.4 比较数字
+
+```大于(>)```   ```大于等于(>=)```   ```小于(<)```    ```小于等于(<=)```   ```==(等于)```    ```!=(不等于)```
+
+
+
+```python
+age = 18
+
+print(age > 15)
+print(age >= 15)
+print(age < 20)
+print(age <= 15)
+print(age == 18)
+print(age != 18)
+```
+
+输出结果：
+
+```cmd
+True
+True
+True
+False
+True
+False
+```
+
+
+
+#### 5.2.5 检查多个条件
+
+##### 5.2.5.1 使用and检查多个条件
+
+```and```连接的多个条件，如果每个测试都为```True```，整个表达式就为True；
+
+```and```连接的多个条件，如果至少有一个测试没有通过，整个表达式就为False。
+
+```python
+number_1 = 18
+number_2 = 20
+
+print((number_1 > 15) and (number_1 <= 20))
+print((number_2 > 15) and (number_2 <= 18))
+```
+
+输出结果：
+
+```cmd
+True
+False
+```
+
+
+
+##### 5.2.5.2 使用or检查多个条件
+
+```or```连接的多个条件，如果每个测试都为```False```，整个表达式就为```false```；
+
+```or```连接的多个条件，如果至少有一个测试为```True```，整个表达式就为```True```。
+
+```cmd
+number_1 = 18
+number_2 = 20
+
+print((number_1 > 15) or (number_1 >= 25))
+print((number_2 < 15) or (number_2 <= 18))
+```
+
+输出结果：
+
+```cmd
+True
+False
+```
+
+
+
+#### 5.2.6 检查特定值是否包含在列表中	
+
+```关键字:```   **in**
+
+```功能：``` 检查某个值是否**在**列表中
+
+```示例：```
+
+```python
+nicknames = ["侯燕子", "臭宝", "宝宝"]
+
+print("臭宝" in nicknames)
+print("狗子" in nicknames)
+```
+
+输出结果：
+
+```cmd
+True
+False
+```
+
+
+
+#### 5.2.7 检查特定值是否不包含在列表中
+
+```关键字:```  **not  in**
+
+```功能：``` 检查某个值是否**不在**列表中
+
+```示例：```
+
+```python
+nicknames = ["侯燕子", "臭宝", "宝宝"]
+
+
+print("狗子" not in nicknames)
+print("臭宝" not in nicknames)
+```
+
+输出结果：
+
+```cmd
+True
+False
+```
+
+
+
+#### 5.2.8 布尔表达式
+
+```布尔表达式:```条件测试的别名。布尔表达式的结果要么为True，要么为False
+
+布尔值通常用于记录条件，如游戏是否正在运行，或用户是否可以编辑网站的特定内容：
+
+---
+
+```python
+game_active = True 
+can_edit = False
+```
+
+---
+
+
+
+### 5.3 if 语句
+
+#### 5.3.1 简单的 if 语句
+
+最简单的if语句只有一个测试和一个操作：
+
+```python
+if conditional_test: 
+	do something
+```
+
+如果条件测试```conditional_test```的结果为True,则执行if后面的代码。
+
+如果条件测试```conditional_test```的结果为False,则不执行if后面的代码。
+
+
+
+#### 5.3.2 if-else 语句
+
+```语法格式：```
+
+```python
+if conditional_test: 
+	do something
+else:
+    do something
+```
+
+如果条件测试```conditional_test```的结果为**True**,则执行**if**后面的代码
+
+如果条件测试```conditional_test```的结果为**Fasle**,则执行**else**后面的代码。
+
+```if-else```结构中总有语句会被执行。
+
+
+
+#### 5.3.3 if-elif-else 结构
+
+经常需要检查超过两个的情形，为此可使用Python提供的```if-elif-else```结构。Python只执行```if-elif-else```结构中的一个代码块，它依次检查每个条件测试，直到遇到通过了的条件测试。测试通过后，Python将执行紧跟在它后面的代码，并跳过余下的测试。
+
+```需求：```
+
+- 4岁以下免费；
+
+- 4~18岁收费5美元；
+
+- 18岁（含）以上收费10美元。
+
+```示例：```
+
+```python
+age = 16
+
+if age < 4:
+	print("4岁以下免费")
+elif age >= 4 and age < 18:
+	print("4~18岁收费5美元")
+else:
+	print("18岁（含）以上收费10美元")
+```
+
+输出结果：
+
+```cmd
+4~18岁收费5美元
+```
+
+
+
+#### 5.3.4 使用多个 elif 代码块
+
+```需求：```
+
+- 4岁以下免费；
+
+- 4~18岁收费5美元；
+
+- 18岁（含）以上收费10美元；
+- 65岁（含）以上的老人，可以半价（即5美元）
+
+```示例：```
+
+```python
+age = 65
+
+if age < 4:
+	print("4岁以下免费")
+elif age >= 4 and age < 18:
+	print("4~18岁收费5美元")
+elif age >= 18 and age < 65:
+	print("18岁（含）以上收费10美元")
+else:
+    print("65岁（含）以上的老人，可以半价（即5美元）")
+```
+
+```输出结果:```
+
+```cmd
+65岁（含）以上的老人，可以半价（即5美元）
+```
+
+
+
+#### 5.3.5 省略 else 代码块
+
+如果使用```else```,则一定会有代码块被执行，其实```else```就是来兜底的。
+
+如果某些时候我们为了不引入恶意的数据，使用```elif```来处理特定的数据。
+
+```python
+age = 65
+
+if age < 4:
+	print("4岁以下免费")
+elif age >= 4 and age < 18:
+	print("4~18岁收费5美元")
+elif age >= 18 and age < 65:
+	print("18岁（含）以上收费10美元")
+elif age >= 65:
+    print("65岁（含）以上的老人，可以半价（即5美元）")
+```
+
+我们在上面的数据中
+
